@@ -335,13 +335,13 @@ def create_urllist_with_rss() -> None:
     if not os.path.exists(FILEPATH_RSS_URLS):
         print(f"RSS URL file {FILEPATH_RSS_URLS} does not exist.")
         return
-    else:
-        with open(FILEPATH_RSS_URLS, "r", encoding="utf-8") as rss_urls:
-            try:
-                rss_data = json.load(rss_urls)
-            except json.JSONDecodeError:
-                print(f"Error decoding JSON from {FILEPATH_RSS_URLS}")
-                return
+
+    with open(FILEPATH_RSS_URLS, "r", encoding="utf-8") as rss_urls:
+        try:
+            rss_data = json.load(rss_urls)
+        except json.JSONDecodeError:
+            print(f"Error decoding JSON from {FILEPATH_RSS_URLS}")
+            return
 
     rss_list = [item["url"] for item in rss_data["urls"]]
 

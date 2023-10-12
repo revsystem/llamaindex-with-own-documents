@@ -1,6 +1,13 @@
 # llamaindex-with-own-documents
 
-Indexing and query your documents with LlamaIndex.
+Indexing and querying your documents with LlamaIndex.
+It is called Retrieval-Augmented Generation(RAG).
+
+
+## Architecture
+
+![Indexing](https://github.com/revsystem/llamaindex-with-own-documents/assets/17801281/7b299cde-4807-4726-aebd-1bbee34d0334)
+![Querying](https://github.com/revsystem/llamaindex-with-own-documents/assets/17801281/15c968d3-d2ba-4640-8144-c81c2fcb1882)
 
 ## Usage
 
@@ -49,15 +56,19 @@ python3 ./llamaindex_indexing.py -u rss
 Input query: <INPUT_YOUR_QUERY>
 ```
 
-### Execute query
+### Input query
 
 ```console
 python3 ./llamaindex_indexing.py
 ```
 
+```console
+Input query: <INPUT_YOUR_QUERY>
+```
+
 ### Response
 
-We can get a streaming answer like the ChatGPT.
+We can get a answer.
 
 ```console
 ==========
